@@ -69,7 +69,15 @@ In this mode, the snail is controlled by a neural network.
         - `think`: get output from neural network and change gravity
         - `make_inputs`: make inputs for neural network
         - `batch_normalize`: normalize inputs
-        
+- `plot.py`: Plot class
+    - plot average score and best score from [average.txt](/average.txt) 
+- `average.txt`: save average score and min score from each generation
+    - x y z : max score, min score, average score
+you can use this file to plot average score and best score
+
+plots of two different runs are:
+- [first-run](/Screenshot 2022-01-24 235711.png)
+- [second-run](/Screenshot 2022-01-24 235741.png)        
 
 
 ## Contributors

@@ -76,8 +76,8 @@ In this mode, the snail is controlled by a neural network.
 you can use this file to plot average score and best score
 
 plots of two different runs are:
-- [first-run](/Screenshot 2022-01-24 235711.png)
-- [second-run](/Screenshot 2022-01-24 235741.png)        
+- [first-run](https://github.com/mohamadch91/SnailJumper/blob/master/Screenshot%202022-01-24%20235711.png)
+- [second-run](https://github.com/mohamadch91/SnailJumper/blob/master/Screenshot%202022-01-24%20235741.png)        
 
 
 ## Contributors

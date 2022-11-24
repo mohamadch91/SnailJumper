@@ -21,11 +21,16 @@ def display_best_score():
     score_rect = score_surf.get_rect(center=(520, 100))
     screen.blit(score_surf, score_rect)
 
-
 def display_generation():
     score_surf = small_game_font.render(f"Generation: {generation}", False, (64, 64, 64))
     score_rect = score_surf.get_rect(topleft=(8, 50))
     screen.blit(score_surf, score_rect)
+
+def display_players_count():
+    score_surf = small_game_font.render(f"Players alive: {len(players)}", False, (64, 64, 64))
+    score_rect = score_surf.get_rect(center=(80, 100))
+    screen.blit(score_surf, score_rect)
+
 
 
 class Obstacle(pygame.sprite.Sprite):
@@ -113,8 +118,6 @@ def create_players(mode, player_list=None):
         players.add(Player(mode))
     else:
         for player in player_list:
-            player.change_gravity('left')
-            player.rect.x = 177
             players.add(player)
 
 
@@ -125,8 +128,6 @@ def update_fitness():
 
 def reset_timer_and_seed():
     np.random.seed(35)
-    pygame.time.set_timer(snail_timer, 0)
-    pygame.time.set_timer(fly_timer, 0)
     pygame.time.set_timer(snail_timer, 500)
     pygame.time.set_timer(fly_timer, 4750)
 
@@ -146,7 +147,7 @@ if __name__ == '__main__':
     game_mode = None
     start_time = 0
     best_score = 0
-    num_players = 150
+    num_players = 300
 
     background_surface = pygame.image.load('Graphics/Background.jpg').convert()
 
@@ -246,6 +247,7 @@ if __name__ == '__main__':
             current_score = display_score()
             if game_mode == "Neuroevolution":
                 display_generation()
+                display_players_count()
                 update_fitness()
 
             if current_score > best_score:

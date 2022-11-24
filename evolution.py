@@ -17,11 +17,7 @@ class Evolution:
         :param num_players: number of players that we return
         :returns player who selected with SUS algorithm
         """
-        # TODO (Implement top-k algorithm here)
-        # TODO (Additional: Implement roulette wheel here)
-        # TODO (Additional: Implement SUS here)
-        # TODO (Additional :Implement Q tournament here)
-        # finding best , worst,avg fitness and plot on another file
+     
         best=players[0].fitness
         worst=players[0].fitness
         avg=0
@@ -73,7 +69,7 @@ class Evolution:
                     best_fitness = player
             new_players.append(best_fitness)
 
-        # TODO (Additional: Learning curve)
+        
         return new_players
 
     def generate_new_population(self, num_players, prev_players=None):

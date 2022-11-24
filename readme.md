@@ -42,8 +42,39 @@ In this mode, the snail is controlled by a neural network.
 
 - `game.py`: Main file to run the game
   - include all other files
+- `nn.py`: Neural network class
+    - `NeuralNetwork` class
+        - `__init__`: initialize neural network
+        - `forward`: feed forward function
+        - `batch_normalize`: normalize input
+        - `activation`: activation function
+          - `sigmoid`: use sigmoid activation function
+- `evolution.py`: Evolution class
+    - `Evolution` class
+        - `__init__`: initialize evolution
+        - `next_population_selection`: select next population from current population and wrire to [average.txt](/average.txt) use Q-Tournament
+        if you want to use SUS  selection, uncomment line 46 to 62 and comment line 65 to 74
+        - `generate_new_population`: generate new population from current population
+        - `mutate`: mutate a population
+        - `clone_player`: clone a player
+- `player.py`: Player class
+    - `Player` class
+        - `__init__`: initialize player
+        - `flip_player_horizontally`: flip player horizontally
+        - `update`: update player use neural network or keyboard
+        - `animation_state`: animate player
+        - `apply_gravity`: apply gravity to player
+        - `player_input`: get player input in manual mode
+        - `change_gravity`: change gravity 
+        - `think`: get output from neural network and change gravity
+        - `make_inputs`: make inputs for neural network
+        - `batch_normalize`: normalize inputs
+        
 
 
 ## Contributors
-@SoroushMehraban
-@mohamadch91
+[SoroushMehraban](https://github.com/SoroushMehraban)
+[mohamadch91](https://github.com/mohamadch91)
+
+## Orginal Repository
+[SoroushMehraban/SnailJumper](https://github.com/SoroushMehraban/SnailJumper)

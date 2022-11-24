@@ -82,6 +82,7 @@ plots of two different runs are:
 
 ## Contributors
 [SoroushMehraban](https://github.com/SoroushMehraban)
+<br />
 [mohamadch91](https://github.com/mohamadch91)
 
 ## Orginal Repository
